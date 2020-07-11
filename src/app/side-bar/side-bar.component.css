@@ -1,0 +1,30 @@
+.side-bar {
+  height: 100vh;
+  width: 25vw;
+  background: #3d5a80;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  transition-duration: 300ms;
+}
+
+.hide-btn {
+  position: absolute;
+  padding: 0 1rem;
+  right: 10px;
+  top: 10px;
+  z-index: 1001;
+}
+
+@media (max-width: 991.98px) {
+  .side-bar {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: -100vw;
+  }
+
+  .side-bar.show {
+    left: 0;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="side-bar d-flex flex-column container shadow" [ngClass]="{'show' : showSideBar}">
+  <button class="btn btn-danger btn-sm d-lg-none hide-btn" (click)="sideHideBtn()">hide</button>
+  <div class="row">
+    <div class="col-12 d-flex mt-3">
+      <img src="{{user.img}}" alt="{{user.alt}}" style="border-radius: 50%; width: 60px;">
+      <div class="d-flex flex-column justify-content-center ml-3">
+        <h5 class="text-white mb-0 font-weight-bold stretch">{{user.name}}</h5>
+        <a href="#" class="text-white no-decoration font-weight-light">My Profile</a>
+      </div>
+    </div>
+    <div class="col-12 mt-4 mt-lg-5">
+      <app-calendar></app-calendar>
+    </div>
+    <div class="col-12 bg-dark py-3 h-100">
+      <h4 class="text-white mb-2">Sessions</h4>
+      <p class="mb-0 text-white font-weight-light mb-2 stretch" *ngFor="let time of times">{{time}}</p>
+    </div>
+  </div>
+</div>

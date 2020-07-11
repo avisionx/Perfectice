@@ -1,0 +1,28 @@
+<div class="row mb-2">
+  <div class="col-7">
+    <select class="custom-select" (change)="monthChange($event)">
+      <option selected hidden>{{curDate.month}}</option>
+      <option *ngFor="let month of months; let i = index" [value]="i">{{month}}</option>
+    </select>
+  </div>
+  <div class="col-5">
+    <select class="custom-select" (change)="yearChange($event)">
+      <option selected hidden>{{curDate.year}}</option>
+      <option *ngFor="let year of years" [value]="year">{{year}}</option>
+    </select>
+  </div>
+</div>
+<ul class="text-white list-inline d-flex">
+  <li *ngFor="let day of weekdayNames" class="font-weight-bold list-inline-item mb-0 m-0 w-100">{{day}}</li>
+</ul>
+
+<ul class="list-inline d-flex" style="flex-wrap:wrap;">
+  <ng-container *ngFor="let date of monthCal; let i = index">
+    <li class="font-weight-light list-inline-item m-0 pb-3" style="width: 14%;">
+      <div *ngIf="date; else elseBlock" class="date-color" (click)="dateChanged(date.day)"
+        [ngClass]="{'selected' : date.day == curDate.date}">
+        {{date.day}}</div>
+      <ng-template #elseBlock class="m-0">&nbsp;</ng-template>
+    </li>
+  </ng-container>
+</ul>

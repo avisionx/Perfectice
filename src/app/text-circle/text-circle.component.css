@@ -1,0 +1,13 @@
+.circle-wrapper {
+  height: 70px;
+  position: relative;
+  width: 70px;
+}
+
+.text {
+  height: 100%;
+  width: 100%;
+  color: white;
+  position: relative;
+  margin: 0;
+}

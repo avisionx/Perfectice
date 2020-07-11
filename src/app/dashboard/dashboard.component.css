@@ -1,0 +1,29 @@
+.dashboard-wrapper {
+  margin-left: 25vw;
+}
+
+.dashnav>li>a {
+  color: white !important;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-width: 1.5px;
+}
+
+.dashnav>li>a.active {
+  color: #EE6C4D !important;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  border-color: #EE6C4D;
+}
+
+@media (max-width: 991.98px) {
+  .dashboard-wrapper {
+    margin-left: 0;
+  }
+}

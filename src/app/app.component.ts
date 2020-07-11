@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'perfectice';
+  showSideBar = false;
+
+  toggleSideNav() {
+    this.showSideBar = !this.showSideBar;
+    window.scroll(0, 0);
+  }
 }

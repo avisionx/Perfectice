@@ -1,0 +1,10 @@
+.side-btn {
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  left: 10px;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}

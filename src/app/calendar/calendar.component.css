@@ -1,0 +1,20 @@
+.date-color {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.date-color.selected {
+  position: relative;
+  color: #ee6c4d;
+}
+
+.date-color.selected::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: #ee6c4d;
+  width: 5px;
+  left: 13%;
+  top: 100%;
+}
